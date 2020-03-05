@@ -30,14 +30,14 @@ body {
     content: "";
     width: 4px;
     height: 330px;
-    bottom: calc(50% - 40px);
+    bottom: calc(50% - 50px);
     left: 8px;
     background-color: red;
     border-radius: 2px;
     box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.2);
     transform: rotate(0);
     z-index: 1;
-    transform-origin: center 290px;
+    transform-origin: center 280px;
     -webkit-animation: stop-watch-seconds-run 60s linear infinite;
             animation: stop-watch-seconds-run 60s linear infinite; }
   .stop-watch__hands::after {

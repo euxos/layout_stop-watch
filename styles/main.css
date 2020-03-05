@@ -7,34 +7,49 @@ body {
   align-items: center;
   width: 600px;
   height: 600px;
-  margin: 100px auto; }
+  margin: 100px auto;
+  background-color: lightgrey;
+  border-radius: 50%; }
   .stop-watch__hands {
     position: relative;
     width: 20px;
     height: 20px; }
   .stop-watch__center {
     position: absolute;
+    content: "";
     width: 20px;
     height: 20px;
     box-sizing: border-box;
-    border: 4px solid #000;
-    background-color: pink;
+    border: 3px solid red;
+    box-shadow: 0 0 14px 1px rgba(255, 0, 0, 0.2);
+    background-color: #fff;
     border-radius: 50%;
     z-index: 2; }
   .stop-watch__hands::before, .stop-watch__hands::after {
     position: absolute;
     content: "";
-    width: 10px;
-    height: 300px;
-    bottom: 10px;
-    left: 5px;
-    background-color: pink;
-    border-radius: 5px;
-    transform-origin: center bottom;
+    width: 4px;
+    height: 330px;
+    bottom: calc(50% - 40px);
+    left: 8px;
+    background-color: red;
+    border-radius: 2px;
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.2);
+    transform: rotate(0);
+    z-index: 1;
+    transform-origin: center 290px;
     -webkit-animation: stop-watch-seconds-run 60s linear infinite;
             animation: stop-watch-seconds-run 60s linear infinite; }
   .stop-watch__hands::after {
-    height: 180px;
+    height: 260px;
+    width: 8px;
+    bottom: calc(50% - 30px);
+    left: 6px;
+    background-color: #000;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
+    z-index: 0;
+    transform-origin: center 230px;
     -webkit-animation: stop-watch-seconds-run 3600s linear infinite;
             animation: stop-watch-seconds-run 3600s linear infinite; }
 
